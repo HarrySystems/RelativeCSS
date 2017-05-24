@@ -1,0 +1,146 @@
+
+&tabs{					
+	position: relative;
+	width: initial;
+	> *,
+	> label > *
+	{
+		float: left;
+		//clear: both;
+		width: initial;
+	}
+	table *{
+		float: none;
+	}
+
+	&>label{
+		haight: auto;
+		//float: left;
+		//overflow-x: hidden;
+
+		// IE FIX
+		width: auto\0;
+		height: (($ref_size * 2) - ($gutter * 4))\0;
+		line-height: ($gutter * 2)\0;
+
+		@media screen and (min-height: 1px){
+			width: initial;
+		}
+		&> span{
+			cursor: pointer;
+			display: inline-block;
+			// height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+
+			// tab label
+			> span ~ span{
+				background-color: #a0a0a0;
+				color: #fff;
+
+				padding: 0 $gutter 0 $gutter;
+				margin: $gutter 0 0 $gutter;
+
+				line-height: ($ref_size * 2) - $gutter;
+				height: ($ref_size * 2) - ($gutter * 2);
+			}
+		}
+
+		&> input[type=radio]{
+			// radio out of the way
+			position: absolute;
+			height: 0;
+			width: 0;
+
+			// events
+			&:checked ~ span,
+			&:checked {
+				background-color: #fff;
+			}
+
+			&:focus ~ span,
+			&:focus {
+				background-color: #fff;
+			}
+
+			// 'checked' can't be with the others to work with IE8
+			&:checked ~ span ~ div,
+			&:checked ~ div{
+				// display: block;
+				display: table;
+				width: 100%;
+			}
+
+			&:focus ~ span ~ div,
+			&:focus ~ div{
+				display: table;
+				width: 100%;
+			}       
+
+
+			&:hover ~ span ~ div,
+			&:hover ~ div {
+				display: block\9;// IE only
+			}
+		}
+
+		&> div{
+			// same size as tabs div
+			position: absolute;
+			top: 42px;// necessary so it doesn't hover labels
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			// initial state
+			display: none;
+			text-align: left;
+			text-align: initial;
+			background-color: #fff;
+
+			overflow-y: scroll;
+
+		}
+
+		&:first-child > div{
+			display: block\9;// at least something will be show in IE8
+		}
+	}
+
+	//&.default-theme{
+	width: 100%;
+	/*height: 300px;*/
+	//overflow: scroll;
+
+	background-color: #369;
+	padding: 2px;
+
+	&>label{
+		text-align: center;
+
+		&>span{
+			background-color: #369;
+			color: #fff;
+			padding: 4px 6px 4px 6px;
+		}
+
+		&>input[type=radio]{
+			&:checked ~ span{
+				color: #000;
+				border-bottom: 1px solid #000;
+			}
+
+			&:focus ~ span{
+				color: #000;
+				border-bottom: 1px solid #000;
+			}
+		}
+
+		&>div{
+			padding: 15px;
+			border: 1px solid #a0a0a0;
+			border-top: 0px solid #fff;
+		}
+	}
+	//}
+}

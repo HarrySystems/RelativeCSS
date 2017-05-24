@@ -1,0 +1,41 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+/*
+reset {
+	&,
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		height: auto;
+		width: auto;
+		box-sizing: initial;
+		*
+		font-size: initial;
+		font: initial;
+		background: initial;
+		height: initial;
+		width: initial;
+		padding: initial;
+		border: initial;
+		margin: initial;
+		vertical-align: initial;
+		display: initial;
+		line-height: initial;
+		list-style: initial;
+		quotes: initial;
+		border-collapse: initial;
+		border-spacing: initial;*
+	}
+	
+	relative {
+		@extend #{$framework};	
+	}
+}*/

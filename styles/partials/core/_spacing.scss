@@ -1,0 +1,15 @@
+.gutter{
+	padding: $gutter;
+	// consider changing to maring and use hack to cover IE using padding. it will certainly affect the grid system
+}
+
+.nogutter{
+	padding: 0;
+}
+
+.margin-gutter {
+	// margin-top: $gutter;
+	// margin-bottom: $gutter;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}

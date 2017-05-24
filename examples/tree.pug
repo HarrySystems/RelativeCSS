@@ -1,0 +1,27 @@
+include ../styles/include.pug
+relative
+	ul.rel-tree
+		li
+			label(for='t1') 1
+			input(id='t1',type='checkbox')
+			ul
+				li
+					label(for='t1-1') 1.1
+					input(id='t1-1',type='checkbox')
+					ul
+						li
+							label(for='t1-1-1') 1.1.1
+							input(id='t1-1-1',type='checkbox')
+							ul
+								li
+									label(for='t1-1-1-1') 1.1.1.1
+									input(id='t1-1-1-1',type='checkbox')
+									ul
+						li
+							label(for='t1-1-2') 1.1.2
+							input(id='t1-1-2',type='checkbox')
+							ul
+				li
+					label(for='t1-2') 1.2
+					input(id='t1-2',type='checkbox')
+					ul

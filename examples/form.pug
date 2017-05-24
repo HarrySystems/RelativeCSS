@@ -1,0 +1,124 @@
+include ../styles/include.pug
+relative
+	h4 Spacing between elements
+	.group
+		select.f-1-6
+		select(multiple).f-1-6
+		input(type='text').f-1-6
+		label.f-1-6 check it out!
+			input(type='checkbox')
+		input(type='select').f-1-6
+		button.f-1-6
+	.group
+		select.f-6
+		select(multiple).f-6
+		input(type='text').f-6
+		label.f-6 check it out!
+			input(type='checkbox')
+		input(type='select').f-6
+		button.f-6
+	.group
+		.d-6
+			select
+			select(multiple)
+			input(type='text') 
+			label check it out!
+				input(type='checkbox')
+			input(type='select')
+			button
+	.d-6
+		select
+		select(multiple)
+		input(type='text')
+		label check it out!
+			input(type='checkbox')
+		input(type='select')
+		button
+	.d-6
+		div
+			select
+		div
+			select(multiple)
+		div
+			input(type='text')
+		div
+			label check it out!
+				input(type='checkbox')
+		div
+			input(type='select')
+		div
+			button
+		div
+			button
+	.group
+		.f-6
+			select
+		.f-6
+			select(multiple)
+		.f-6
+			input(type='text')
+		.f-1-6
+			label check it out!
+				input(type='checkbox')
+		.f-1-6
+			input(type='select')
+		.f-1-6
+			button
+	.status-grey Regions should be grouped in divs for default spacing, auto scale and logical responsiveness.
+		
+
+	h4 Long text inside labels (it should not break the grid)
+	div
+		.f-12
+			label Should not break the grid
+				select.fr-3(multiple)
+		.f-3
+			label  Very very looooooong text
+				select.fr-3(multiple)
+		.f-12
+			label(style="text-overflow: initial; white-space: initial; overflow-x: initial;") Breaks the grid
+				select.fr-3(multiple)
+		//.f-6
+			label
+				span should not break the grid
+				input(type='checkbox')
+		.f-6
+			label
+				input(type='checkbox')
+				span should not break the grid
+		
+		//.f-6
+			label should not break the grid
+				input(type='checkbox')
+			
+			
+	h4 Filling rows
+	.d-4
+		label Teste
+			textarea.fr-5(multiple)
+		div
+			label Text Box
+				input(type='text')
+			label Teste
+				select.fr-1(multiple)
+			//label Text Box
+				input(type='text')
+			label check it out!
+				input(type='checkbox')
+			input(type='text')
+				
+			label Teste
+				select.fr-1(multiple)
+		//div.fill
+			div.d-2
+				label Text Box
+					input(type='text')
+				label Teste
+					select.fr-1(multiple)
+	h4 Inline (reset default 100% width)
+	.inline
+		label Teste
+		select
+			option test test test
+			option test
+			option test

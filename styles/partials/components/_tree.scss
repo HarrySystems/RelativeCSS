@@ -1,0 +1,24 @@
+&tree {
+	* {
+		width: initial;
+		clear: both;
+		padding: 0 0 0 40px;
+	}
+	label {
+		cursor: pointer;
+	}
+
+	ul {
+		display: none;
+	}
+
+	input[type='checkbox'] {
+		display: none;	
+
+		&:checked {
+			+ ul {
+				display: block;
+			}
+		}
+	}
+}

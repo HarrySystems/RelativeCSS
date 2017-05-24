@@ -1,0 +1,38 @@
+&status- {
+	@mixin status($color-main, $color-sec, $color-text) {
+		
+		button,
+		input[type='submit'] {
+			background-color: $color-main;
+			color: $color-sec;
+		}
+		
+		&-inverse {
+			
+		}
+	}
+	
+	&grey,
+	&inactive {
+		
+	}
+	
+	&error ,
+	&red {
+		
+	}
+	
+	&warning,
+	&orange {
+		
+	}
+	
+	&success,
+	&green {
+		
+	}
+	
+	&default {
+		
+	}
+}

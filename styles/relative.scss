@@ -1,0 +1,38 @@
+// HELPERS
+	@import "partials/helpers/_variables.scss";
+	@import "partials/helpers/_reset.scss";
+
+// COMPONENTS
+	#{$framework-short}- {
+		@import "partials/components/_brick.scss";
+		@import "partials/components/_menu.scss";
+		@import "partials/components/_zoom.scss";
+		@import "partials/components/_tree.scss";
+		@import "partials/components/_tabs.scss";
+
+		/*
+			TODO:
+			- modal
+			- slides
+			- accordion
+			- stack
+			- tooltip
+			- card
+			- footer
+			- media
+		*/
+		//@include "_footer.scss";
+	}
+// PROPORTION AND SIZING
+	// #{$framework} {
+		// CORE
+			@import "partials/core/_spacing.scss";
+			@import "partials/core/_proportion.scss";
+			@import "partials/core/_contain.scss";
+			@import "partials/core/_theme.scss";
+
+		// SIZING
+			@import "partials/sizing/_horizontal.scss";
+			@import "partials/sizing/_vertical.scss";
+	// }
+

@@ -1,0 +1,24 @@
+$framework: "relative";
+$framework-short: ".rel";
+$glue: "-";// x of y
+
+// horizontal
+	$grid_sizes: 12 11 10 9 8 7 6 5 4 3 2 1; // $grid_h_sizes
+	$fill: "f";// fill // $grid_h_p_fill 
+	$push: "jn";// jump next column // $grid_h_p_push
+	$pull: "jl";// jump last column // $grid_h_p_pull
+	$dividein: "d";// divide in // $grid_h_p_divide
+
+// vertical
+	$jump_rows: 1 2 3 4 5 6 7 8 9 10 11 12; // $grid_v_jumps
+	$jumprow: "jr";// fil row // $grid_v_p_jump
+
+	$fill_rows: 1 2 3 4 5 6 7 8 9 10 11 12;// $grid_v_fills
+	$fillrow: "fr";// $grid_v_p_fill
+
+// screen size
+	$screen_sizes: 900 1000 1200;
+
+// proportion
+	$ref_size: 16px;
+	$gutter: 3px;

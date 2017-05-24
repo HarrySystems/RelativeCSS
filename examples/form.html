@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="../styles/relative.processed.css" />
+<relative></relative>
+<relative>
+  <h4>Spacing between elements</h4>
+  <div class="group"><select class="f-1-6"></select><select class="f-1-6" multiple="multiple"></select><input class="f-1-6" type="text" /><label class="f-1-6">check it out!<input type="checkbox"/></label><input class="f-1-6" type="select" /><button class="f-1-6"></button></div>
+  <div
+    class="group"><select class="f-6"></select><select class="f-6" multiple="multiple"></select><input class="f-6" type="text" /><label class="f-6">check it out!<input type="checkbox"/></label><input class="f-6" type="select" /><button class="f-6"></button></div>
+    <div
+      class="group">
+      <div class="d-6"><select></select><select multiple="multiple"></select><input type="text" /><label>check it out!<input type="checkbox"/></label><input type="select" /><button></button></div>
+      </div>
+      <div class="d-6"><select></select><select multiple="multiple"></select><input type="text" /><label>check it out!<input type="checkbox"/></label><input type="select" /><button></button></div>
+      <div class="d-6">
+        <div><select></select></div>
+        <div><select multiple="multiple"></select></div>
+        <div><input type="text" /></div>
+        <div><label>check it out!<input type="checkbox"/></label></div>
+        <div><input type="select" /></div>
+        <div><button></button></div>
+        <div><button></button></div>
+      </div>
+      <div class="group">
+        <div class="f-6"><select></select></div>
+        <div class="f-6"><select multiple="multiple"></select></div>
+        <div class="f-6"><input type="text" /></div>
+        <div class="f-1-6"><label>check it out!<input type="checkbox"/></label></div>
+        <div class="f-1-6"><input type="select" /></div>
+        <div class="f-1-6"><button></button></div>
+      </div>
+      <div class="status-grey">Regions should be grouped in divs for default spacing, auto scale and logical responsiveness.</div>
+      <h4>Long text inside labels (it should not break the grid)</h4>
+      <div>
+        <div class="f-12"><label>Should not break the grid<select class="fr-3" multiple="multiple"></select></label></div>
+        <div class="f-3"><label> Very very looooooong text<select class="fr-3" multiple="multiple"></select></label></div>
+        <div class="f-12"><label style="text-overflow: initial; white-space: initial; overflow-x: initial;">Breaks the grid<select class="fr-3" multiple="multiple"></select></label></div>
+        <!--.f-6label
+	span should not break the grid
+	input(type='checkbox')-->
+        <div class="f-6"><label><input type="checkbox"/><span>should not break the grid</span></label></div>
+        <!--.f-6label should not break the grid
+	input(type='checkbox')
+
+-->
+      </div>
+      <h4>Filling rows</h4>
+      <div class="d-4"><label>Teste<textarea class="fr-5" multiple="multiple"></textarea></label>
+        <div><label>Text Box<input type="text"/></label><label>Teste<select class="fr-1" multiple="multiple"></select></label>
+          <!--label Text Boxinput(type='text')--><label>check it out!<input type="checkbox"/></label><input type="text" /><label>Teste<select class="fr-1" multiple="multiple"></select></label></div>
+        <!--div.filldiv.d-2
+	label Text Box
+		input(type='text')
+	label Teste
+		select.fr-1(multiple)-->
+      </div>
+      <h4>Inline (reset default 100% width)</h4>
+      <div class="inline"><label>Teste</label><select><option>test test test</option><option>test</option><option>test</option></select></div>
+</relative>

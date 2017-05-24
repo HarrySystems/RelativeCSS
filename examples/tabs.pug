@@ -1,0 +1,50 @@
+include ../styles/include.pug
+relative
+	h3 Tabs
+	.rel-tabs.default-theme(style='height:500px;')
+		label
+			input(type='radio',name='c')
+			span
+				span Wall
+				span 50
+			div
+		label
+			input(type='radio',name='c',checked)
+			span Form
+			div
+				include form.pug
+					
+
+
+
+		label
+			input(type='radio',name='c')
+			span Tree
+			div
+				include tree.pug
+
+		label
+			input(type='radio',name='c')
+			span Table
+			div
+				table
+					thead
+						tr
+							th A
+							th B
+							th C
+					tbody
+					- for (var i = 0; i < 3; ++i) {
+						tr
+							td 1
+							td 3
+							td z
+						tr
+							td 2
+							td 2
+							td x
+						tr
+							td 3
+							td 1
+							td y
+					- }

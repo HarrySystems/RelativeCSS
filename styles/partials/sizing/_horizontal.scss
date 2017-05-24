@@ -1,0 +1,123 @@
+// grid
+	@mixin grid($size) {
+		@if $size != null {
+			$size: #{$size}#{$glue}; 
+		}
+		@each $grid_size in $grid_sizes {
+			@for $i from 1 through $grid_size {
+				$value: percentage($i / $grid_size);
+				$name: round($i / $grid_size * 10000000);
+
+				// fill
+				%#{$size}#{$fill}#{$name} {
+					width: calc(#{$value} - #{$gutter * 2});
+					margin: $gutter;
+				}
+
+
+				// push
+				%#{$size}#{$push}#{$name} {
+					margin-left: $value;
+				}
+
+				// pull
+				%#{$size}#{$pull}#{$name} {
+					margin-left: -$value;
+				}
+			}
+		}
+
+		@each $grid_size in $grid_sizes {
+			@for $i from 1 through $grid_size {
+				$value: percentage($i / $grid_size);
+				$base: round($i / $grid_size * 100);
+				$name: #{$i}#{$glue}#{$grid_size};
+				$extend: round($i / $grid_size * 10000000);
+
+				// fill
+					.#{$size}#{$fill}#{$glue}#{$name} {
+						@extend %#{$size}#{$fill}#{$extend};
+					}
+
+				// push
+					.#{$size}#{$push}#{$glue}#{$name} {
+						@extend %#{$size}#{$push}#{$extend};
+					}
+
+				// pull
+					.#{$size}#{$pull}#{$glue}#{$name} {
+						@extend %#{$size}#{$pull}#{$extend};
+					}
+
+
+
+				@if $i == 1 {
+					// divide in equal parts
+						.#{$size}#{$dividein}#{$glue}#{$grid_size} ,
+						&.#{$size}#{$dividein}#{$glue}#{$grid_size} {
+							> * {
+								@extend %#{$size}#{$fill}#{$extend};
+							}
+
+							// > div {
+							// 	width: $value;
+							// 	margin: 0;
+							// }
+							// padding: 0; 
+						}
+
+					// simpler 1-1
+						.#{$size}#{$fill}#{$glue}#{$grid_size} {
+							@extend %#{$size}#{$fill}#{$extend};
+						}
+				}
+				
+				
+				@if $i == $grid_size {
+					// row with equal sized elements
+						.#{$size}f-equal:first-child:nth-last-child(#{$i}) {
+							@extend %#{$size}#{$fill}#{$extend};
+						}
+				}
+			}
+
+		}
+
+		
+	}
+
+	// NORMAL - DESKTOP
+		@include grid(null);
+
+	// MEDIUM - TABLET
+		@media (max-width: 700px) and (min-width: 480px) {
+			@include grid(m);
+		}
+
+	// SMALL - MOBILE
+		@media (max-width: 480px) {
+			@include grid(s);
+		}
+
+// fill parent
+	.fit {
+		height: 100%;
+		width: 100%;
+	}
+
+// div for grouping purposes, not display
+	.group {
+		margin: 0;
+		padding: 0;
+	}
+
+// resets default width and float behavior
+	.inline {
+		*,
+		& {
+			width: initial;
+			clear: both;
+		}
+	}
+
+

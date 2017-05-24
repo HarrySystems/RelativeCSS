@@ -1,0 +1,22 @@
+include ../styles/include.pug
+relative
+	h3 Grid
+		for item, i in [1, 2, 3, 4, 5, 6, 8, 10, 12]
+			div
+				- for(var j = 0; j < item; j++)
+					.rel-brick(class="f-" + item)
+		.d-12
+			- for(var j = 0; j < 12; j++)
+				.rel-brick
+		div
+			.rel-brick.f-1-3
+			.rel-brick.f-1-3.jn-1-3
+		.f-equal
+			.rel-brick
+			.rel-brick
+			.rel-brick
+		.scale
+			.rel-brick.f-4
+			.rel-brick.f-4
+			.rel-brick.f-4
+			.rel-brick.f-4

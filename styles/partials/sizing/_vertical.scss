@@ -1,0 +1,25 @@
+// JUMP ROW
+	@each $jump_row in $jump_rows {
+		.#{$jumprow}#{$glue}#{$jump_row} {
+			margin-top: ($ref_size + $gutter) * 2 * $jump_row;
+		}
+	}
+
+// FILL ROW
+	div>.#{$fillrow} {
+		height: 100%;
+	}
+
+	fieldset>.#{$fillrow} {
+		height: 90%;
+	}
+
+	@each $fill_row in $fill_rows {
+		.#{$fillrow}#{$glue}#{$fill_row} {
+			height: ($ref_size + ($ref_size + $gutter) * $fill_row) * 2;
+		}
+
+		fieldset.#{$fillrow}#{$glue}#{$fill_row} {
+			height: ($ref_size + ($ref_size + $gutter) * ($fill_row - .5)) * 2;
+		}
+	}

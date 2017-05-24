@@ -1,0 +1,19 @@
+@mixin show_hide($size) {
+
+	
+	
+}
+
+
+// NORMAL - DESKTOP
+	@include show_hide(null);
+
+// MEDIUM - TABLET
+	@media (max-width: 700px) and (min-width: 480px) {
+		@include show_hide(m);
+	}
+
+// SMALL - MOBILE
+	@media (max-width: 480px) {
+		@include show_hide(s);
+	}
